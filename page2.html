@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>New Arrivals</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </head>
+
+    <body>
+
+        <nav class="navbar">
+            <a href="index.html"><div class="logo"><h1>Fit Fusion</h1></div></a>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="" class="active">New arrivals</a></li>
+                <li><a href="account.html">Account</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+            </ul>
+
+            <div class="menu-btn">
+                <i class="fa fa-bars"></i>
+            </div>
+        </nav>
+
+    </div>
+    <input class="bar" type="text" id="searchbar" onkeyup="search()" name="search" placeholder="search for a product...">
+    <div class="section"><p>   <br></br>    <br></br> </p><span></span></div>
+
+    <script>
+        function search() {
+    let input = document.getElementById('searchbar').value
+    input=input.toLowerCase();
+    let x = document.getElementsByClassName('card');
+      
+    for (i = 0; i < x.length; i++) { 
+        if (!x[i].innerHTML.toLowerCase().includes(input)) {
+            x[i].style.display="none";
+        }
+        else {
+            x[i].style.display="list-item";                 
+        }
+    }
+}
+    </script>
+
+
+
+
+        <h1 class="pheading">New arrivals</h1>
+
+        <h2>All Products</h2>
+        <select>
+            <option>Default sorting</option>
+            <option>sort by price</option>
+            <option>sort by popularity</option>
+            <option>sort by rating</option>
+            <option>sort by sale</option>
+        </select>
+  
+
+        <section class="sec">
+            <div class="products">
+
+                <div class="card">
+                    <div class="img"><img src="images/table.jpg" alt=""></div>
+                    <div class="title">Soccer table</div>
+                    <div class="Availability">In stock</div>
+                    <div class="box">
+                        <div class="rating">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star"aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="price">KES 32000</div>
+                        <button class="btn add-to-cart" data-product="Soccer table" data-price="32000">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img"><img src="images/golf.jpg" alt=""></div>
+                    <div class="title">Golf sets</div>
+                    <div class="Availability">In Stock</div>
+                    <div class="box">
+                        <div class="rating">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star"aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="price">KES 27000</div>
+                        <button class="btn add-to-cart" data-product="Golf sets" data-price="27000">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img"><img src="images/Armband.jpg" alt=""></div>
+                    <div class="title">Captain Armband</div>
+                    <div class="Availability">In Stock</div>
+                    <div class="box">
+                        <div class="rating">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star"aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="price">KES 700</div>
+                        <button class="btn add-to-cart" data-product="Captain armband" data-price="700">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img"><img src="images/kit.jpg" alt=""></div>
+                    <div class="title">kit</div>
+                    <div class="Availability">In Stock</div>
+                    <div class="box">
+                        <div class="rating">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star"aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="price">KES 2500</div>
+                        <button class="btn add-to-cart" data-product="Kit" data-price="2500">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img"><img src="images/bat.jpg" alt=""></div>
+                    <div class="title">Baseball bat</div>
+                    <div class="Availability">In Stock</div>
+                    <div class="box">
+                        <div class="rating">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star"aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="price">KES 8000</div>
+                        <button class="btn add-to-cart" data-product="Baseball bat" data-price="8000">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img"><img src="images/stick.jpg" alt=""></div>
+                    <div class="title">Hockey stick</div>
+                    <div class="Availability">In Stock</div>
+                    <div class="box">
+                        <div class="rating">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star"aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="price">KES 5000 </div>
+                        <button class="btn add-to-cart" data-product="Hockey stick" data-price="5000">Add to Cart</button>
+                    </div>
+                </div>  
+                
+                <div class="page-btn">
+                    <span>1</span>
+                    <a href="page2.html">  
+                    <span>2</span>
+                    <a href="page3.html">  
+                    <span>3</span>
+                    <a href="arrivals.html"></a>
+                </div>
+
+            </div>
+        </section>
+
+
+
+
+        <footer>
+            <p>Copyright at <a href="">Fit Fusion</a></p>
+        </footer>
+
+        <script>
+            let cart = [];
+                  
+            const addToCartButtons = document.querySelectorAll(".add-to-cart");
+            const cartIcon = document.querySelector("#cart-wrap .fa-shopping-cart");
+            const cartCount = document.getElementById("cart");
+            
+            let itemCount = 0;
+            let products = [];
+            
+            function updateCartCount() {
+              cartCount.textContent = itemCount;
+            }
+            
+            function addToCart(product) {
+              itemCount++;
+              updateCartCount();
+              products.push(product);
+            }
+            
+            addToCartButtons.forEach((button) => {
+              button.addEventListener('click', () => {
+                const productName = button.getAttribute('data-product');
+                        const productPrice = parseFloat(button.getAttribute('data-price'));
+            
+               
+            
+                const product = {
+                  name: productName,
+                  price: productPrice,
+                };
+            
+                cart.push(product);
+            
+                localStorage.setItem('cart', JSON.stringify(cart));
+            
+                alert(productName + '\nAdded To Cart');
+              });
+            });
+            addToCartButtons.forEach((button) => {
+                button.addEventListener("click", () => {
+                  const productName = button.parentNode.querySelector("h4").textContent;
+                  addToCart(productName);
+                });
+              });
+            
+              cartIcon.addEventListener("click", () => {
+                if (products.length > 0) {
+                    window.open("cart.html")
+                } else {
+                 window.open("cart.html")
+               }
+              });
+            
+            </script>
+    </body>
+</html>
+</html>

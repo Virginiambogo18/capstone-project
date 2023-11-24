@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Fitfusion</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </head>
+
+    <body>
+
+        <nav class="navbar">
+            <div class="logo"><h1>Fitfusion</h1></div>
+            <ul class="menu">
+                <li><a href="" class="active">Home</a></li>
+                <li><a href="arrivals.html">New Arrivals</a></li>
+                <li><a href="account.html">Account</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+            </ul>
+
+            <div class="menu-btn">
+                <i class="fa fa-bars"></i>
+            </div>
+        </nav>
+    <input class="bar" type="text" id="searchbar" onkeyup="search()" name="search" placeholder="search for a product...">
+    <div class="section"><p>   <br></br>    <br></br> </p><span></span></div>
+
+    <script>
+        function search() {
+    let input = document.getElementById('searchbar').value
+    input=input.toLowerCase();
+    let x = document.getElementsByClassName('card');
+      
+    for (i = 0; i < x.length; i++) { 
+        if (!x[i].innerHTML.toLowerCase().includes(input)) {
+            x[i].style.display="none";
+        }
+        else {
+            x[i].style.display="list-item";                 
+        }
+    }
+}
+    </script>
+
+        <section class="content">
+            <h1>All products</h1>
+            <p>Get the latest sports equipment</p>
+            <a href="arrivals.html"><button>Shop Now</button></a>
+        </section>
+
+        <h1 class="pheading">Shop now</h1>
+
+        <section class="sec">
+            <div class="products">
+
+                <div class="card">
+                    <div class="img"><img src="images/treadmill.jpg" alt=""></div>
+                    <div class="title">Treadmill</div>
+                    <div class="box">
+                        <div class="price">KES 15,000</div>
+                        <button class="btn add-to-cart" data-product="Treadmill" data-price="15000">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img"><img src="images/squash.jpg" alt=""></div>
+                    <div class="title">squash racket</div>
+                    <div class="box">
+                        <div class="price">KES 12,000</div>
+                        <button class="btn add-to-cart" data-product="squash racket" data-price="12000">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img"><img src="images/boots.jpg" alt=""></div>
+                    <div class="title">Nike boots</div>
+                    <div class="box">
+                        <div class="price">KES 3,000</div>
+                        <button class="btn add-to-cart" data-product="nike boots" data-price="3000">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img"><img src="images/rugby.jpg" alt=""></div>
+                    <div class="title">Rugby ball</div>
+                    <div class="box">
+                        <div class="price">KES 4,500</div>
+                        <button class="btn add-to-cart" data-product="Rugby ball" data-price="4500">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img"><img src="images/gloves.jpg" alt=""></div>
+                    <div class="title">Boxing gloves</div>
+                    <div class="box">
+                        <div class="price">KES 3,000</div>
+                        <button class="btn add-to-cart" data-product="Boxing Gloves" data-price="3000">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img"><img src="images/skates.jpg" alt=""></div>
+                    <div class="title">Skate shoes</div>
+                    <div class="box">
+                        <div class="price">KES 5,000 </div>
+                        <button class="btn add-to-cart" data-product="skate shoes" data-price="5000">Add to Cart</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <footer>
+            <p>Copyright at <a href="">Fitfusion</a></p>
+        </footer>
+   </body>
+</html>
